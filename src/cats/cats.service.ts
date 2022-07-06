@@ -9,6 +9,7 @@ export class CatsService {
     const nameParts = new Array(counter).fill('Meouw');
     const name = nameParts.join('') + 'i';
     return {
+      __typename: 'Cat',
       age,
       id,
       name,

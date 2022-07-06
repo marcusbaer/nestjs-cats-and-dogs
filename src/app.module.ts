@@ -15,6 +15,7 @@ import { PetsModule } from './pets/pets.module';
       definitions: {
         path: './src/graphql.ts',
         outputAs: 'class',
+        emitTypenameField: true,
       },
       // debug: false,
       // playground: false,

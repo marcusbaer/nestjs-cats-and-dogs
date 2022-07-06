@@ -1,4 +1,4 @@
-type Cat {
+type Cat implements Pet {
     id: ID!
     name: String!
     age: Int
