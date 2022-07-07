@@ -3,7 +3,25 @@
 ## Queries
 
 ```
-# Write your query or mutation here
+query theSomebody {
+  somebody {
+    name
+    pets {
+      __typename
+      name
+    }
+    friends {
+      name
+      pets {
+        id
+        __typename
+        name
+        age
+      }
+    }
+  }
+}
+
 query thePets {
   pets {
     __typename

@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { CatsModule } from './cats/cats.module';
 import { DogsModule } from './dogs/dogs.module';
 import { PetsModule } from './pets/pets.module';
+import { SomebodyModule } from './somebody/somebody.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { PetsModule } from './pets/pets.module';
     CatsModule,
     DogsModule,
     PetsModule,
+    SomebodyModule,
   ],
   controllers: [AppController],
   providers: [AppService],

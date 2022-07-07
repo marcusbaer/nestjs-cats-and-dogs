@@ -33,6 +33,8 @@ export abstract class IQuery {
     abstract dogs(): Nullable<Dog>[] | Promise<Nullable<Dog>[]>;
 
     abstract pets(): Nullable<Pet>[] | Promise<Nullable<Pet>[]>;
+
+    abstract somebody(): Somebody | Promise<Somebody>;
 }
 
 export class Dog implements Pet {
@@ -41,6 +43,13 @@ export class Dog implements Pet {
     name: string;
     age?: Nullable<number>;
     bones?: Nullable<number>;
+}
+
+export class Somebody {
+    __typename?: 'Somebody';
+    name: string;
+    pets: Nullable<Pet>[];
+    friends: Nullable<Somebody>[];
 }
 
 type Nullable<T> = T | null;
