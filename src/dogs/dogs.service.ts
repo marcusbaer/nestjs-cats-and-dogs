@@ -13,6 +13,7 @@ export class DogsService {
       age,
       id,
       name,
+      bones: age,
     };
   }
 

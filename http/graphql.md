@@ -7,8 +7,13 @@
 query thePets {
   pets {
     __typename
-    id
     name
+    ... on Dog {
+        bones
+  	}
+  	... on Cat {
+      mice
+    }
   }
 }
 

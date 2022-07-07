@@ -18,6 +18,7 @@ export class Cat implements Pet {
     id: string;
     name: string;
     age?: Nullable<number>;
+    mice?: Nullable<number>;
 }
 
 export abstract class IQuery {
@@ -31,7 +32,7 @@ export abstract class IQuery {
 
     abstract dogs(): Nullable<Dog>[] | Promise<Nullable<Dog>[]>;
 
-    abstract pets(): Nullable<Dog>[] | Promise<Nullable<Dog>[]>;
+    abstract pets(): Nullable<Pet>[] | Promise<Nullable<Pet>[]>;
 }
 
 export class Dog implements Pet {
@@ -39,6 +40,7 @@ export class Dog implements Pet {
     id: string;
     name: string;
     age?: Nullable<number>;
+    bones?: Nullable<number>;
 }
 
 type Nullable<T> = T | null;

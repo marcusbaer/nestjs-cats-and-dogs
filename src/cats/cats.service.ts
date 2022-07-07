@@ -13,6 +13,7 @@ export class CatsService {
       age,
       id,
       name,
+      mice: age,
     };
   }
 

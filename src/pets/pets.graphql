@@ -5,5 +5,5 @@ interface Pet {
 }
 
 type Query {
-    pets: [Dog]!
+    pets: [Pet]!
 }
