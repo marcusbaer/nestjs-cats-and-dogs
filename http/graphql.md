@@ -3,7 +3,7 @@
 ## Queries
 
 ```
-query theSomebody {
+query theSomebody($catId: ID!) {
   somebody {
     name
     pets {
@@ -18,6 +18,12 @@ query theSomebody {
         name
         age
       }
+    }
+    cat(id: $catId) {
+      __typename
+      id
+      name
+      age
     }
   }
 }

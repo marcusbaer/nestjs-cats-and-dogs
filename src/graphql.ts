@@ -7,6 +7,13 @@
 
 /* tslint:disable */
 /* eslint-disable */
+export interface Somebody {
+    name: string;
+    pets: Nullable<Pet>[];
+    friends: Nullable<Somebody>[];
+    cat?: Nullable<Cat>;
+}
+
 export interface Pet {
     id: string;
     name: string;
@@ -23,8 +30,6 @@ export class Cat implements Pet {
 
 export abstract class IQuery {
     __typename?: 'IQuery';
-
-    abstract cat(id: string): Nullable<Cat> | Promise<Nullable<Cat>>;
 
     abstract cats(): Nullable<Cat>[] | Promise<Nullable<Cat>[]>;
 
@@ -43,13 +48,6 @@ export class Dog implements Pet {
     name: string;
     age?: Nullable<number>;
     bones?: Nullable<number>;
-}
-
-export class Somebody {
-    __typename?: 'Somebody';
-    name: string;
-    pets: Nullable<Pet>[];
-    friends: Nullable<Somebody>[];
 }
 
 type Nullable<T> = T | null;

@@ -1,3 +1,10 @@
+interface Somebody {
+    name: String!
+    pets: [Pet]!
+    friends: [Somebody]!
+    cat(id: ID!): Cat
+}
+
 type Cat implements Pet {
     id: ID!
     name: String!
@@ -6,6 +13,5 @@ type Cat implements Pet {
 }
 
 type Query {
-    cat(id: ID!): Cat
     cats: [Cat]!
 }

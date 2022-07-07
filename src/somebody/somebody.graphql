@@ -1,9 +1,5 @@
-type Somebody {
+interface Somebody {
     name: String!
     pets: [Pet]!
     friends: [Somebody]!
-}
-
-type Query {
-    somebody: Somebody!
 }
