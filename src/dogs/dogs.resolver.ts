@@ -1,7 +1,7 @@
 import { Resolver, Query, Args } from '@nestjs/graphql';
 import { DogsService } from './dogs.service';
 
-@Resolver()
+@Resolver('Dog')
 export class DogsResolver {
   constructor(private dogsService: DogsService) {}
   @Query()

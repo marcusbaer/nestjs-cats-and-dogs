@@ -1,7 +1,7 @@
 import { Resolver, Query, Args } from '@nestjs/graphql';
 import { CatsService } from './cats.service';
 
-@Resolver()
+@Resolver('Cat')
 export class CatsResolver {
   constructor(private catsService: CatsService) {}
   @Query()
