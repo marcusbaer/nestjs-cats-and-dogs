@@ -9,9 +9,11 @@ export class DogsService {
     const nameParts = new Array(counter).fill('Wuff');
     const name = nameParts.join('') + 'i';
     return {
+      __typename: 'Dog',
       age,
       id,
       name,
+      bones: age,
     };
   }
 

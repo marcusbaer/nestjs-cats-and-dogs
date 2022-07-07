@@ -1,3 +1,9 @@
+interface Pet {
+    id: ID!
+    name: String!
+    age: Int
+}
+
 type Query {
-    pets: [Dog]
+    pets: [Pet]!
 }

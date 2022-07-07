@@ -1,7 +1,8 @@
-type Dog {
+type Dog implements Pet {
     id: ID!
     name: String!
     age: Int
+    bones: Int
 }
 
 type Query {
