@@ -1,13 +1,22 @@
-import { Resolver, Query, Args } from '@nestjs/graphql';
+import { Resolver, Query, ResolveField } from '@nestjs/graphql';
 import { DogsService } from 'src/dogs/dogs.service';
 import { CatsService } from '../cats/cats.service';
+import { Cat, Dog } from 'src/graphql';
 
-@Resolver()
+@Resolver('Pet')
 export class PetsResolver {
   constructor(
     private catsService: CatsService,
     private dogsService: DogsService,
   ) {}
+
+  @ResolveField()
+  __resolveType(value: Cat | Dog) {
+    if ('mice' in value) {
+      return 'Cat';
+    }
+    return 'Dog';
+  }
 
   @Query()
   pets() {
